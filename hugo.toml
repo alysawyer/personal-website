@@ -1,4 +1,48 @@
+
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
-theme = "hugo-profile"
+theme = "nightfall"
+
+[params]
+author = "Alyssa Sawyer"
+user = "hello"
+hostname = "alysawyer.com"
+
+
+[[params.social]]
+key = 0
+name = "resume"
+url = "https://www.example.com"
+
+[[params.social]]
+key = 1
+name = "github"
+url = "https://github.com/alysawyer"
+
+[[params.social]]
+key = 2
+name = "linkedin"
+url = "https://www.linkedin.com/in/alysawyer/"
+
+[[params.social]]
+key = 3
+name = "email"
+url = "mailto:hello@alysawyer.com"
+
+[menu]
+  [[menu.header]]
+    name = "portfolio"
+    weight = 0
+    url = "/portfolio"
+
+  [[menu.header]]
+    name = "posts"
+    weight = 1
+    url = "/posts"
+
+  [[menu.header]]
+    name = "keyboards"
+    weight = 2
+    url = "/keyboards"
+
