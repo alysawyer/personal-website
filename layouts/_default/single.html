@@ -36,17 +36,3 @@
 </div>
 
 {{ end }}
-
-
-{{ if .Param "author" }}
-  <script>
-    import { annotate } from "https://unpkg.com/rough-notation?module";
-
-    const n1 = document.querySelector("h1");
-
-    console.log(n1);
-    const a1 = annotate(n1, { type: "highlight", color: "yellow", padding: 15 });
-
-    a1.show();
-  </script>
-{{ end }}
