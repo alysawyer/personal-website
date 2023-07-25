@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <div class="flexWrapper">
         {{ partial "header.html" . }}
 
@@ -18,7 +19,8 @@
             <main class="main">
                 <div class="indexWrapper">
                     <div>
-                        <h1 class="indexHeader"><del>**{{ .Site.Params.author }}**</del></h1>
+                        <h1 class="indexHeader">{{ .Site.Params.author }}</h1>
+                        <p class="authorBio">{{ .Site.Params.authorBio }}</p>
                     </div>
                     {{ if isset .Site.Params "social" }}
                         {{ partial "social.html" . }}

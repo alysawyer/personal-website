@@ -6,9 +6,15 @@ theme = "nightfall"
 
 [params]
 author = "Alyssa Sawyer"
-user = "hello"
+user = "aly"
 hostname = "alysawyer.com"
+authorBio = "CS/Math Student @ Harvey Mudd College"
 
+
+[[params.social]]
+key = 0
+name = "projects"
+url = "https://www.example.com"
 
 [[params.social]]
 key = 0
@@ -28,7 +34,7 @@ url = "https://www.linkedin.com/in/alysawyer/"
 [[params.social]]
 key = 3
 name = "email"
-url = "mailto:hello@alysawyer.com"
+url = "mailto:aly@alysawyer.com"
 
 [menu]
   [[menu.header]]
