@@ -27,6 +27,16 @@ newsletter: true
 disable_comments: false
 ---
 
+* `em` is the modifier
+
+1. em (_text_) - blue underline
+2. strong (**text**) - yelow highlight
+3. del (~~text~~) - red strike-through
+
+4. em > em (_*text*_) - blue circle
+5. em > strong (_**text**_) - lawngreen box
+6. em > del (_~~text~~_) - red cross-off
+
 Emoji can be enabled in a Hugo project in a number of ways.
 
 The [`emojify`](https://gohugo.io/functions/emojify/) function can be called directly in templates or [Inline Shortcodes](https://gohugo.io/templates/shortcode-templates/#inline-shortcodes).

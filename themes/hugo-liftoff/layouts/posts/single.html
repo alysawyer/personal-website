@@ -100,4 +100,80 @@
     </aside>
   </div>
 </div>
+
+<script type="module">
+  import { annotate } from "https://unpkg.com/rough-notation?module";
+
+
+  function checkParent(elem) {
+    const parent = elem.parentElement;
+    const strong = document.createElement("strong");
+    const em = document.createElement("em");
+    const del = document.createElement("del");
+    console.log(elem.hasChildNodes(), elem);
+
+
+    if (
+      parent.constructor === strong.constructor ||
+      parent.constructor === em.constructor ||
+      parent.constructor === del.constructor
+    )
+      return false;
+    if (elem.childElementCount > 0) return false;
+    return true;
+  }
+
+
+  function annotateElement(selector, type, color) {
+    document.querySelectorAll(selector).forEach((elem) => {
+      const shouldAllowAnnotation = checkParent(elem);
+      if (shouldAllowAnnotation)
+        annotate(elem, { type, color, multiline: true, animate: false }).show();
+    });
+  }
+
+
+  function annotateNestedElement(selector, type, color) {
+    document.querySelectorAll(selector).forEach((elem) => {
+      annotate(elem, {
+        type,
+        color,
+        multiline: true,
+        animate: false,
+        brackets: ["left", "right", "top", "bottom"],
+      }).show();
+    });
+  }
+
+
+  try {
+    annotateElement("em", "underline", "#2196f3");
+    annotateElement("strong", "highlight", "yellow");
+    annotateElement("del", "strike-through", "#ff0000");
+    annotateNestedElement("em > del", "crossed-off", "#ff0000");
+    annotateNestedElement("em > strong", "box", "lawngreen");
+    annotateNestedElement("em > em", "circle", "#ff000080");
+    annotateNestedElement("blockquote", "bracket", "#da3bf1");
+  } catch (exception) {
+    console.log(exception.message);
+  }
+</script>
+
+
+<style>
+  .section-content em,
+  .section-content strong,
+  .section-content del {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+  }
+
+
+  blockquote {
+    background-color: #fff;
+    padding: 0.3rem;
+    margin: 2rem 0;
+  }
+</style>
 {{ end }}
