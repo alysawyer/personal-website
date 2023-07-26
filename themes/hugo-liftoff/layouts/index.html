@@ -81,13 +81,13 @@
 <div class="container">
   <section class="section hero">
     <div class="hero-info">
-      <h1 class="hero-title"><strong>{{ .Title }}</strong></h1>
+      <h1 class="hero-title">Hi! I'm <strong>{{.Title}}</strong></h1>
       {{ with .Params.subtitle }}
         <p class="hero-subtitle">{{.}}</p>
       {{ end }}
       <div class="btn-group">
-        <a class="btn-primary" href="{{ "about/" | relURL }}">About</a>
-        <a class="btn-secondary" href="{{ "projects/" | relURL }}">Projects</a>
+        <a class="btn-primary" href="{{ "about/" | relURL }}">Resume</a>
+        <a class="btn-secondary" href="{{ "projects/" | relURL }}">Email me!</a>
       </div>
     </div>
     <div class="hero-owner">
@@ -112,36 +112,6 @@
     </div>
   </section>
   <section class="section">
-    <div class="home-title-dropdown">
-      <h2 class="home-section-posts-title">
-        {{- with .Params.posts_section_heading -}}
-          {{- . -}}
-        {{- else -}}
-          Recent Posts
-        {{- end -}}
-      </h2>
-      <select name="choice" id="select-posts">
-        {{ range (where .Sections "Section" "posts") }}
-        <option value="all-{{ .Name | lower }}" selected>All {{ .Name | lower }}</option>
-        {{ range .Sections }}
-        {{ if .CurrentSection.Pages }}
-        <option value="{{ replace .CurrentSection.RelPermalink "/" "" | lower }}">{{ .CurrentSection.Name }}</option>
-        {{ end }}
-        {{ end }}
-        {{ end }}
-      </select>
-    </div>
-    {{ range (where site.RegularPages "Section" "posts" | first 10) }}
-      <div class="post-entry-filter entry--{{ replace .CurrentSection.RelPermalink "/" "" | lower }}">
-        {{ partial "posts/post-entry.html" . }}
-        <div class="post-entry-divider"></div>
-      </div>
-    {{ else }}
-      {{ partial "general/fallback-text.html" . }}
-    {{ end }}
-    <a class="btn-secondary see-more" href="{{ "posts/" | relURL }}">More Posts</a>
-  </section>
-  <section class="section">
     <h2 class="home-section-title">
       {{- with .Params.projects_section_heading -}}
         {{- . -}}
@@ -159,6 +129,26 @@
     {{ else }}
       {{ partial "general/fallback-text.html" . }}
     {{ end }}
+  </section>
+  <section class="section">
+    <div class="home-title-dropdown">
+      <h2 class="home-section-posts-title">
+        {{- with .Params.posts_section_heading -}}
+          {{- . -}}
+        {{- else -}}
+          Recent Posts
+        {{- end -}}
+      </h2>
+    </div>
+    {{ range (where site.RegularPages "Section" "posts" | first 10) }}
+      <div class="post-entry-filter entry--{{ replace .CurrentSection.RelPermalink "/" "" | lower }}">
+        {{ partial "posts/post-entry.html" . }}
+        <div class="post-entry-divider"></div>
+      </div>
+    {{ else }}
+      {{ partial "general/fallback-text.html" . }}
+    {{ end }}
+    <a class="btn-secondary see-more" href="{{ "posts/" | relURL }}">More Posts</a>
   </section>
 </div>
 
