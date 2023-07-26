@@ -140,7 +140,7 @@
         {{- end -}}
       </h2>
     </div>
-    {{ range (where site.RegularPages "Section" "posts" | first 10) }}
+    {{ range (where site.RegularPages "Section" "posts" | first 5) }}
       <div class="post-entry-filter entry--{{ replace .CurrentSection.RelPermalink "/" "" | lower }}">
         {{ partial "posts/post-entry.html" . }}
         <div class="post-entry-divider"></div>
