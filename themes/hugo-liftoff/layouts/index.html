@@ -113,7 +113,7 @@
       {{- with .Params.projects_section_heading -}}
         {{- . -}}
       {{- else -}}
-        My Projects
+        Featured Projects
       {{- end -}}
     </h2>
     {{ $projects := where site.RegularPages "Section" "projects" | first 6 }}
