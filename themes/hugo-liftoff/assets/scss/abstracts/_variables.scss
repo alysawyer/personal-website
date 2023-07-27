@@ -3,18 +3,18 @@
 // -----------------------------------------------------------------------------
 
 :root, [data-theme="default"] {
-  --color-primary: rgb(18, 120, 175);
+  --color-primary: rgba(99, 159, 171, 1);
   --color-inline-code: hsl(0, 81%, 35%);
   
   /* color contrasts */
-  --color-bg: rgb(248, 248, 248);
-  --color-contrast-lower: hsl(0, 0%, 95%);
-  --color-contrast-low: hsl(240, 1%, 83%);
-  --color-contrast-medium-low: hsl(240, 1%, 65%);
-  --color-contrast-medium: hsl(240, 1%, 48%);
-  --color-contrast-medium-high: hsl(240, 2%, 34%);
-  --color-contrast-high: hsl(240, 4%, 20%);
-  --color-contrast-higher: black;
+  --color-bg: rgba(244, 230, 215, 1);
+  --color-contrast-lower: rgba(229, 217, 204, 1);
+  --color-contrast-low: rgba(214, 204, 192, 1);
+  --color-contrast-medium-low: rgba(184, 177, 168, 1);
+  --color-contrast-medium: rgba(123, 124, 121, 1);
+  --color-contrast-medium-high: rgba(63, 71, 74, 1);
+  --color-contrast-high: rgba(33, 44, 51, 1);
+  --color-contrast-higher: rgba(2, 17, 27, 1);
 
   --color-text: var(--color-contrast-high);
 
@@ -25,6 +25,8 @@
   --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
   --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
   --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
+
+  
 }
 
 [data-theme] {
@@ -33,18 +35,18 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: rgb(86, 184, 237);
-  --color-inline-code: hsl(0, 81%, 70%);
+  --color-primary: rgba(99, 159, 171, 1);
+  --color-inline-code: hsl(0, 81%, 35%);
   
   /* color contrasts */
-  --color-bg: rgb(18, 18, 18);
-  --color-contrast-lower: hsl(240, 6%, 15%);
-  --color-contrast-low: hsl(252, 4%, 25%);
-  --color-contrast-medium-low: hsl(240, 2%, 34%);
-  --color-contrast-medium: hsl(240, 1%, 57%);
-  --color-contrast-medium-high: hsl(240, 1%, 65%);
-  --color-contrast-high: hsl(0, 0%, 89%);
-  --color-contrast-higher: white;
+  --color-bg: rgba(2, 17, 27, 1);
+  --color-contrast-lower: rgba(33, 44, 51, 1);
+  --color-contrast-low: rgba(63, 71, 74, 1);
+  --color-contrast-medium-low: rgba(123, 124, 121, 1);
+  --color-contrast-medium: rgba(184, 177, 168, 1);
+  --color-contrast-medium-high: rgba(214, 204, 192, 1);
+  --color-contrast-high: rgba(229, 217, 204, 1);
+  --color-contrast-higher: rgba(244, 230, 215, 1);
 
   --color-text: var(--color-contrast-high);
 }
