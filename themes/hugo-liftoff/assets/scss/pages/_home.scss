@@ -40,15 +40,13 @@
   row-gap: 20px;
 
   .hero-avatar {
-    max-width: 300px;
-    width: 100%;
-    height: auto;
+    width: 300%;
     border-radius: 20px;
     
-    @include respond-to('medium') {
-      width: 100%;
-      max-width:unset;
-    }
+    // @include respond-to('medium') {
+    //   width: 100%;
+    //   max-width:unset;
+    // }
   }
 }
 
