@@ -77,10 +77,12 @@
     text-decoration: none;
     cursor: pointer;
     padding: 1.4rem 1rem;
+    border-radius: 20px;
 
     &:hover {
       background-color: var(--color-primary);
-      color: var(--color-contrast-lower);
+      color: var(--color-bg);
+      border-radius: 0px 0px 20px 20px!important;
     }
   }
 
