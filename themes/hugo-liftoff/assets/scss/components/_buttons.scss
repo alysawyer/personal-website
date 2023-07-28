@@ -23,10 +23,10 @@
 .btn-primary {
   @extend %btn;
   background-color: var(--color-primary);
-  color: var(--color-contrast-lower);
+  color: var(--color-bg);
 
   &:hover {
-    background: transparent;
+    background: var(--color-bg);
     color: var(--color-primary);
   }
 }
@@ -36,6 +36,6 @@
 
   &:hover {
     background-color: var(--color-primary);
-    color: var(--color-contrast-lower);
+    color: var(--color-bg);
   }
 }
