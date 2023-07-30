@@ -5,16 +5,24 @@
 
   function checkParent(elem) {
     const parent = elem.parentElement;
-    const strong = document.createElement("hil");
-    const em = document.createElement("und");
-    const del = document.createElement("stx");
+    const hil = document.createElement("hil");
+    const und = document.createElement("und");
+    const stx = document.createElement("stx");
+    const box = document.createElement("hil");
+    const cir = document.createElement("und");
+    const blq = document.createElement("stx");
+    const crx = document.createElement("stx");
     console.log(elem.hasChildNodes(), elem);
 
 
     if (
-      parent.constructor === strong.constructor ||
-      parent.constructor === em.constructor ||
-      parent.constructor === del.constructor
+      parent.constructor === hil.constructor ||
+      parent.constructor === und.constructor ||
+      parent.constructor === stx.constructor ||
+      parent.constructor === box.constructor ||
+      parent.constructor === cir.constructor ||
+      parent.constructor === blq.constructor ||
+      parent.constructor === crx.constructor
     )
       return false;
     if (elem.childElementCount > 0) return false;
@@ -25,8 +33,13 @@
   function annotateElement(selector, type, color) {
     document.querySelectorAll(selector).forEach((elem) => {
       const shouldAllowAnnotation = checkParent(elem);
-      if (shouldAllowAnnotation)
-        annotate(elem, { type, color, multiline: true, animate: true }).show();
+      if (shouldAllowAnnotation) {
+        let annotation = annotate(elem, { type, color, multiline: true, animate: true });
+        let time = Number(elem.getAttribute("data-delay"));
+        setInterval(() => {
+          annotation.show();
+        }, time);
+      }
     });
   }
 
@@ -49,13 +62,13 @@
 
 
   try {
-    annotateElement("und", "underline", "#6A2E35");
+    annotateElement("und", "underline", "#2978A0");
     annotateElement("hil", "highlight", "#FCBA04");
     annotateElement("stx", "strike-through", "#6A2E35");
-    annotateNestedElement("und > stx", "crossed-off", "#6A2E35");
-    annotateNestedElement("hil > und", "box", "#2978A0");
-    annotateNestedElement("und > und", "circle", "#81B29A");
-    annotateNestedElement("blockquote", "bracket", "#2978A0");
+    annotateNestedElement("crx", "crossed-off", "#6A2E35");
+    annotateNestedElement("box", "box", "#2978A0");
+    annotateNestedElement("cir", "circle", "#6A2E35");
+    annotateNestedElement("blq", "bracket", "#2978A0");
   } catch (exception) {
     console.log(exception.message);
   }
@@ -64,7 +77,7 @@
 
 <style>
   .section-content em,
-  .section-content strong,
+  .section-content hil,
   .section-content del {
     font-style: normal;
     font-weight: normal;
@@ -82,9 +95,9 @@
 <div class="container">
   <section class="section hero">
     <div class="hero-info">
-      <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy"> <und data-delay="400"><und data-delay="400">Hi!</und></und> I'm <hil data-delay="3000">{{.Title}}</hil><span class="wave">👋</span></h1>
+      <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy"> <cir data-delay="500">Hi!</cir> I'm <hil data-delay="1000">{{.Title}} </hil><span class="wave">👋</span></h1>
       {{ with .Params.subtitle }}
-        <p class="hero-subtitle">I study <und data-delay="100000000000">CS and Math</und> at <hil data-delay="1000000"><und data-delay="10000000">Harvey Mudd College</und></hil>. I'm also a <br> <und data-delay="200000">machine learning</und> research assistant at <hil data-delay="1000">Claremont McKenna</hil>, <br> and a <und data-delay="10000">web developer</und> for Claremont Graduate University.</p>
+        <p class="hero-subtitle">I study <und data-delay="1500">CS and Math</und> at Harvey Mudd College</hil>. I'm also a <br> <und data-delay="2500">machine learning research assistant</und> at Claremont McKenna, <br> and a <und data-delay="3000">web developer</und> for Claremont Graduate University.</p>
       {{ end }}
       <div class="btn-group">
         <a class="btn-primary" href="{{ "about/" | relURL }}">Resume</a>
