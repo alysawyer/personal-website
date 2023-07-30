@@ -48,14 +48,12 @@ about_page_socials = true
 
 # Enable or disable individual social icons
 [social.links]
-  twitter = "username"
   phone = "90929384499"
   github = "alysawyer"
   stack_overflow = "userid/username" # include user id
   email = "aly@alysawyer.com"
-  # linkedin = "username" # Comment out to disable
-  # mastodon_server = "example.social" # include subdomains if relevant, scheme not needed (defaults to https)
-  # mastodon_user = "username" # don't include preceding @
+  linkedin = "alysawyer"
+  medium = "alysawyer"
 
 # Enable or disable individual social share icons in posts
 [social.share]

@@ -2,29 +2,29 @@
 <div class="social-links">
   <ul class="social-icons">
 
-    <!-- Twitter -->
+    <!-- Linkedin -->
+    {{ with .Site.Params.social.links.linkedin }}
+    <li>
+      <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Linkedin profile" class="social-btn linkedin">
+        {{ partial "svg/linkedin.svg" }}
+      </a>
+    </li>
+    {{ end }}
+
+    <!-- phone -->
     {{ with .Site.Params.social.links.phone }}
     <li>
-      <a href="tel:+1{{ . }}" target="_blank" rel="noopener" aria-label="Visit Twitter profile" class="social-btn twitter">
+      <a href="tel:+1{{ . }}" target="_blank" rel="noopener" aria-label="Call phone number" class="social-btn phone">
         {{ partial "svg/phone.svg" }}
       </a>
     </li>
     {{ end }}
-    <!-- Twitter -->
-    {{ with .Site.Params.social.links.twitter }}
-    <li>
-      <a href="https://twitter.com/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Twitter profile" class="social-btn twitter">
-        {{ partial "svg/twitter.svg" }}
-      </a>
-    </li>
-    {{ end }}
-
 
     <!-- Mastodon -->
-    {{ if .Site.Params.social.links.mastodon_user }}
+    {{ if .Site.Params.social.links.medium }}
     <li>
-      <a href="https://{{ with .Site.Params.social.links.mastodon_server }}{{ . }}{{ else }}mastodon.social{{ end }}/@{{ with .Site.Params.social.links.mastodon_user }}{{ . }}{{ end }}" target="_blank" rel="noopener" aria-label="Visit Mastodon profile" class="social-btn mastodon">
-        {{ partial "svg/mastodon.svg" }}
+      <a href="https://medium.com/@{{ . }}" target="_blank" rel="noopener" aria-label="Visit Medium profile" class="social-btn medium">
+        {{ partial "svg/medium.svg" }}
       </a>
     </li>
     {{ end }}
@@ -38,23 +38,6 @@
     </li>
     {{ end }}
 
-    <!-- Stack Overflow -->
-    {{ with .Site.Params.social.links.stack_overflow }}
-    <li>
-      <a href="https://stackoverflow.com/users/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Stack Overflow profile" class="social-btn stack-overflow">
-        {{ partial "svg/stack-overflow.svg" }}
-      </a>
-    </li>
-    {{ end }}
-
-    <!-- LinkedIn -->
-    {{ with .Site.Params.social.links.linkedin }}
-    <li>
-      <a href="https://www.linkedin.com/in/{{ . }}" target="_blank" rel="noopener" aria-label="Visit LinkedIn profile" class="social-btn linkedin">
-        {{ partial "svg/linkedin.svg" }}
-        </a>
-    </li>
-    {{ end }}
 
     <!-- Email -->
     {{ with .Site.Params.social.links.email }}
