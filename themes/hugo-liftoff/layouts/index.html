@@ -5,9 +5,9 @@
 
   function checkParent(elem) {
     const parent = elem.parentElement;
-    const strong = document.createElement("strong");
-    const em = document.createElement("em");
-    const del = document.createElement("del");
+    const strong = document.createElement("hil");
+    const em = document.createElement("und");
+    const del = document.createElement("stx");
     console.log(elem.hasChildNodes(), elem);
 
 
@@ -49,12 +49,12 @@
 
 
   try {
-    annotateElement("em", "underline", "#6A2E35");
-    annotateElement("strong", "highlight", "#FCBA04");
-    annotateElement("del", "strike-through", "#6A2E35");
-    annotateNestedElement("em > del", "crossed-off", "#6A2E35");
-    annotateNestedElement("em > strong", "box", "#2978A0");
-    annotateNestedElement("em > em", "circle", "#81B29A");
+    annotateElement("und", "underline", "#6A2E35");
+    annotateElement("hil", "highlight", "#FCBA04");
+    annotateElement("stx", "strike-through", "#6A2E35");
+    annotateNestedElement("und > stx", "crossed-off", "#6A2E35");
+    annotateNestedElement("hil > und", "box", "#2978A0");
+    annotateNestedElement("und > und", "circle", "#81B29A");
     annotateNestedElement("blockquote", "bracket", "#2978A0");
   } catch (exception) {
     console.log(exception.message);
@@ -82,14 +82,18 @@
 <div class="container">
   <section class="section hero">
     <div class="hero-info">
-      <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy">Hi! I'm <em data-delay="1000"><em data-delay="1000">{{.Title}}</em></em> <span class="wave">👋</span></h1>
+      <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy"> <und data-delay="400"><und data-delay="400">Hi!</und></und> I'm <hil data-delay="3000">{{.Title}}</hil><span class="wave">👋</span></h1>
       {{ with .Params.subtitle }}
-        <p class="hero-subtitle">me when <em data-delay="100">annotation</em>!</p>
+        <p class="hero-subtitle">I study <und data-delay="100000000000">CS and Math</und> at <hil data-delay="1000000"><und data-delay="10000000">Harvey Mudd College</und></hil>. I'm also a <br> <und data-delay="200000">machine learning</und> research assistant at <hil data-delay="1000">Claremont McKenna</hil>, <br> and a <und data-delay="10000">web developer</und> for Claremont Graduate University.</p>
       {{ end }}
       <div class="btn-group">
         <a class="btn-primary" href="{{ "about/" | relURL }}">Resume</a>
         <a class="btn-secondary" href="{{ "projects/" | relURL }}">Email me!</a>
       </div>
+      <br>
+      {{ if eq .Site.Params.home_hero_socials true }}
+        {{ partial "general/social-links.html" . }}
+      {{ end }}
     </div>
     <div class="hero-owner">
       {{ $avatar := .Site.Params.avatar }}
@@ -102,11 +106,8 @@
       {{ end }}
       <img class="hero-avatar"
             src="{{ $image.RelPermalink }}"
-            width="300" height="300"
+            width="500" height="500"
             alt="Headshot belonging to the website owner"/>
-      {{ if eq .Site.Params.home_hero_socials true }}
-        {{ partial "general/social-links.html" . }}
-      {{ end }}
     </div>
   </section>
   <section class="section">
