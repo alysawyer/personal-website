@@ -1,6 +1,15 @@
 <!-- Social Share Button HTML -->
 <div class="social-links">
   <ul class="social-icons">
+
+    <!-- Twitter -->
+    {{ with .Site.Params.social.links.phone }}
+    <li>
+      <a href="tel:+1{{ . }}" target="_blank" rel="noopener" aria-label="Visit Twitter profile" class="social-btn twitter">
+        {{ partial "svg/phone.svg" }}
+      </a>
+    </li>
+    {{ end }}
     <!-- Twitter -->
     {{ with .Site.Params.social.links.twitter }}
     <li>
@@ -9,6 +18,7 @@
       </a>
     </li>
     {{ end }}
+
 
     <!-- Mastodon -->
     {{ if .Site.Params.social.links.mastodon_user }}
