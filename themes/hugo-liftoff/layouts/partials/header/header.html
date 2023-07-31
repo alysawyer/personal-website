@@ -1,6 +1,6 @@
 <header class="container">
   <nav class="main-nav" id="js-navbar">
-    <a class="logo" href="{{ .Site.BaseURL }}"> <img src = "logo.svg" alt="logo icon"/></a>
+    <a class="logo" href="{{ .Site.BaseURL }}"> {{ $image = "images/logo.svg" }} <img src="{{ $image.RelPermalink }}"> </a>
     <ul class="menu" id="js-menu">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
