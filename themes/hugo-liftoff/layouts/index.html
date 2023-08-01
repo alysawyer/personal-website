@@ -97,11 +97,11 @@
     <div class="hero-info">
       <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy"> <cir data-delay="1000">Hi!</cir> I'm <hil data-delay="1500">{{.Title}} </hil><span class="wave">👋</span></h1>
       {{ with .Params.subtitle }}
-        <p class="hero-subtitle">I study <und data-delay="2000">CS and Math</und> at Harvey Mudd College</hil>. I'm also a <br> <und data-delay="2500">machine learning research assistant</und> at Claremont McKenna, <br> and a <und data-delay="3000">web developer</und> for Claremont Graduate University.</p>
+        <p class="hero-subtitle">I study <und data-delay="2000">CS and Math</und> at Harvey Mudd College</hil>. I'm also a <br> <und data-delay="2500">machine learning research assistant</und> at Claremont McKenna <br> and a <und data-delay="3000">web developer</und> for Claremont Graduate University.</p>
       {{ end }}
       <div class="btn-group">
-        <a class="btn-primary" href="{{ "about/" | relURL }}">Resume</a>
-        <a class="btn-secondary" href="{{ "projects/" | relURL }}">Email me!</a>
+        <a class="btn-primary" href="{{ "resume" | relURL }}">Resume</a>
+        <a class="btn-secondary" href="{{ "mailto:aly@alysawyer.com" | relURL }}">Email me!</a>
       </div>
       <br>
       {{ if eq .Site.Params.home_hero_socials true }}
