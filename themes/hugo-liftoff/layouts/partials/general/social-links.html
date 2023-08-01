@@ -2,11 +2,20 @@
 <div class="social-links">
   <ul class="social-icons">
 
-    <!-- Linkedin -->
-    {{ with .Site.Params.social.links.linkedin }}
+    <!-- Github -->
+    {{ with .Site.Params.social.links.github }}
     <li>
-      <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Linkedin profile" class="social-btn linkedin">
-        {{ partial "svg/linkedin.svg" }}
+      <a href="https://github.com/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Github profile" class="social-btn github">
+        {{ partial "svg/github.svg" }}
+      </a>
+    </li>
+    {{ end }}
+
+    <!-- Email -->
+    {{ with .Site.Params.social.links.email }}
+    <li>
+      <a href="mailto:?to={{ . }}" target="_blank" class="social-btn email">
+        {{ partial "svg/email.svg" }}
       </a>
     </li>
     {{ end }}
@@ -20,7 +29,7 @@
     </li>
     {{ end }}
 
-    <!-- Mastodon -->
+    <!-- Medium -->
     {{ if .Site.Params.social.links.medium }}
     <li>
       <a href="https://medium.com/@{{ . }}" target="_blank" rel="noopener" aria-label="Visit Medium profile" class="social-btn medium">
@@ -29,23 +38,14 @@
     </li>
     {{ end }}
 
-    <!-- Github -->
-    {{ with .Site.Params.social.links.github }}
+    <!-- Linkedin -->
+    {{ with .Site.Params.social.links.linkedin }}
     <li>
-      <a href="https://github.com/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Github profile" class="social-btn github">
-        {{ partial "svg/github.svg" }}
+      <a href="https://linkedin.com/in/{{ . }}" target="_blank" rel="noopener" aria-label="Visit Linkedin profile" class="social-btn linkedin">
+        {{ partial "svg/linkedin.svg" }}
       </a>
     </li>
     {{ end }}
 
-
-    <!-- Email -->
-    {{ with .Site.Params.social.links.email }}
-    <li>
-      <a href="mailto:?to={{ . }}" target="_blank" class="social-btn email">
-        {{ partial "svg/email.svg" }}
-      </a>
-    </li>
-    {{ end }}
   </ul>
 </div>
