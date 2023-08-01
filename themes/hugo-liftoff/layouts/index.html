@@ -51,6 +51,7 @@
         color,
         multiline: true,
         animate: true,
+        padding: 8,
         brackets: ["left", "right", "top", "bottom"],
       });
       let time = Number(elem.getAttribute("data-delay"));
@@ -66,7 +67,7 @@
     annotateElement("hil", "highlight", "#FCBA04");
     annotateElement("stx", "strike-through", "#6A2E35");
     annotateNestedElement("crx", "crossed-off", "#6A2E35");
-    annotateNestedElement("box", "box", "#2978A0");
+    annotateNestedElement("box", "box", "#6A2E35");
     annotateNestedElement("cir", "circle", "#6A2E35");
     annotateNestedElement("blq", "bracket", "#2978A0");
   } catch (exception) {
@@ -95,13 +96,13 @@
 <div class="container">
   <section class="section hero">
     <div class="hero-info">
-      <h1 class="hero-title"  style="font-family: Sorts_Mill_Goudy"> <cir data-delay="1000">Hi!</cir> I'm <hil data-delay="1500">{{.Title}} </hil><span class="wave">👋</span></h1>
+      <h1 class="hero-title"> <cir data-delay="1000">Hi!</cir>   I'm <hil data-delay="1500">{{.Title}} </hil><span class="wave">👋</span></h1>
       {{ with .Params.subtitle }}
-        <p class="hero-subtitle">I study <und data-delay="2000">CS and Math</und> at Harvey Mudd College</hil>. I'm also a <br> <und data-delay="2500">machine learning research assistant</und> at Claremont McKenna <br> and a <und data-delay="3000">web developer</und> for Claremont Graduate University.</p>
+        <p class="hero-subtitle"> I’m pursuing a degree in  <und data-delay="2000">Math and Computer Science</und> at Harvey Mudd College. In addition, I'm a <und data-delay="2500">machine learning researcher</und> at Claremont McKenna College and a <und data-delay="3000">web developer</und> for the Cultural Property Disputes Resource at Claremont Graduate University.</p>
       {{ end }}
       <div class="btn-group">
         <a class="btn-primary" href="{{ "resume" | relURL }}">Resume</a>
-        <a class="btn-secondary" href="{{ "resume" | relURL }}">Resume</a>
+        <a class="btn-secondary" href="{{ "mailto:aly@alysawyer.com" | relURL }}">LinkedIn</a>
       </div>
       <br>
       {{ if eq .Site.Params.home_hero_socials true }}
@@ -110,7 +111,7 @@
     </div>
     <div class="hero-owner">
       {{ $avatar := .Site.Params.avatar }}
-      {{ $default_image := "images/aly.svg" }}
+      {{ $default_image := "images/aly.png" }}
       {{ $image := "" }}
       {{ with $avatar }}
         {{ $image = resources.Get $avatar }}
@@ -124,7 +125,7 @@
     </div>
   </section>
   <section class="section">
-    <h2  style="font-family: Sorts_Mill_Goudy" class="home-section-title">
+    <h2 class="home-section-title">
       {{- with .Params.projects_section_heading -}}
         {{- . -}}
       {{- else -}}
@@ -144,7 +145,7 @@
   </section>
   <section class="section">
     <div class="home-title-dropdown">
-      <h2   style="font-family: Sorts_Mill_Goudy" class="home-section-posts-title">
+      <h2  class="home-section-posts-title">
         {{- with .Params.posts_section_heading -}}
           {{- . -}}
         {{- else -}}
