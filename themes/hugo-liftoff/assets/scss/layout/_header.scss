@@ -27,15 +27,15 @@
   }
 }
 
-.logo {
-  @include font-size('md');
-  font-weight: 700;
-  text-decoration: none;
-  width: fit-content;
 
-  &:hover {
-    text-decoration: none;
-  }
+.logo-image {
+  width: 60px;
+  height: auto;
+}
+
+/* Update the fill color for the SVG image */
+.logo-image svg {
+  fill: var(--color-primary);
 }
 
 .menu-link {
