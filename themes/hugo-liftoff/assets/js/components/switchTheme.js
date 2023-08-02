@@ -3,8 +3,7 @@
 function switchTheme() {
   let themeSwitch = document.getElementById('themeSwitch');
   if (themeSwitch) {
-    initTheme();
-
+    
     themeSwitch.addEventListener('change', () => {
       resetTheme();
     });
@@ -13,9 +12,9 @@ function switchTheme() {
     function resetTheme() {
       if (themeSwitch.checked) {
         
-        console.log('hi')
+        console.log('hi');
       } else {
-        console.log('bye')
+        console.log('bye');
       }
     }
   }
