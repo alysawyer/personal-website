@@ -1,10 +1,10 @@
 ---
-title: Portfolio Project 2
-seo_title: Portfolio Project 2
-summary: Portfolio Project 2 is my second portfolio project.
-description: Portfolio Project 2 is my second portfolio project.
-slug: portfolio-project-2
-author: John Doe
+title: CPDR Data Visualization
+seo_title: CPDR Data Visualization
+summary: Data visualization for the Cultural Property Disputes Resource at Claremont Graduate University.
+description: Data visualization for the Cultural Property Disputes Resource at Claremont Graduate University.
+slug: cpdr-data-viz
+author: Alyssa
 
 draft: false
 date: 2020-02-20T03:52:30-05:00
@@ -16,17 +16,16 @@ feature_image: website.jpg
 feature_image_alt: Website
 
 project types: 
-    - Personal
+    - Freelance
 
 techstack:
-    - Hugo
     - HTML/CSS
     - JavaScript
-    - Netlify
-live_url: https://hugo-liftoff.netlify.app
-source_url: https://github.com/wjh18/hugo-liftoff
+    - D3.js
+# live_url: https://hugo-liftoff.netlify.app
+source_url: https://github.com/alysawyer/cpdr-dataviz
 ---
-
+<!-- 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 ## Headings
@@ -155,4 +154,4 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures. -->
