@@ -63,12 +63,12 @@
 
 
   try {
-    annotateElement("und", "underline", "#2978A0");
+    annotateElement("und", "underline", "#245584");
     annotateElement("hil", "highlight", "#FCBA04");
     annotateElement("stx", "strike-through", "#6A2E35");
     annotateNestedElement("crx", "crossed-off", "#6A2E35");
     annotateNestedElement("box", "box", "#6A2E35");
-    annotateNestedElement("cir", "circle", "#6A2E35");
+    annotateNestedElement("cir", "circle", "#245584");
     annotateNestedElement("blq", "bracket", "#2978A0");
   } catch (exception) {
     console.log(exception.message);
@@ -96,7 +96,7 @@
 <div class="container">
   <section class="section hero">
     <div class="hero-info">
-      <h1 class="hero-title"> <cir data-delay="1000">Hi!</cir>   I'm <hil data-delay="1500">{{.Title}} </hil><span class="wave">👋</span></h1>
+      <h1 class="hero-title"> <cir data-delay="1000">Hi!</cir>   I'm <hil data-delay="1500">{{.Title}} </hil><span class="wave">&nbsp;👋</span></h1>
       {{ with .Params.subtitle }}
         <p class="hero-subtitle"> I’m pursuing a degree in  <und data-delay="2000">Math and Computer Science</und> at Harvey Mudd College. In addition, I'm a <und data-delay="2500">machine learning researcher</und> at Claremont McKenna College and a <und data-delay="3000">web developer</und> for the Cultural Property Disputes Resource at Claremont Graduate University.</p>
       {{ end }}
