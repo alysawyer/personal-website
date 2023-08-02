@@ -2,7 +2,7 @@
   <nav class="main-nav" id="js-navbar">
     {{ $asset := resources.Get "images/logo.svg" }}
     <a class="logo" href="{{ .Site.BaseURL }}">
-      <img class="logo-image" alt="Logo" src="{{ $asset.RelPermalink }}" />
+      {{ partial "svg/logo.svg" }}
     </a>
     <ul class="menu" id="js-menu">
       {{ $currentPage := . }}
