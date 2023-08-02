@@ -1,32 +1,30 @@
 ---
-title: Portfolio Project 3
-seo_title: Portfolio Project 3
-summary: Portfolio Project 3 is my third portfolio project.
-description: Portfolio Project 3 is my third portfolio project.
-slug: portfolio-project-3
-author: John Doe
+title: Low Resource Machine Learning Research
+seo_title: Low Resource Machine Learning Research
+summary: Teaching large language models underrepresented languages with textbooks.
+description: Teaching large language models underrepresented languages with textbooks.
+slug: latin-llm
+author: Alyssa
 
 draft: false
-date: 2023-02-20T03:52:30-05:00
+date: 2020-02-20T03:52:30-05:00
 lastmod: 
 expiryDate: 
 publishDate: 
 
-feature_image: 
-feature_image_alt: 
+feature_image: llm-paper.png
+feature_image_alt: Website
 
 project types: 
-    - Open Source
+    - Research
 
 techstack:
-    - Hugo
-    - HTML/CSS
-    - JavaScript
-    - Netlify
-live_url: https://hugo-liftoff.netlify.app
-source_url: https://github.com/wjh18/hugo-liftoff
+    - Python
+    - Machine Learning
+live_url: https://lucaswelch.me/images/Modulus%20Magnus%20Linguae.pdf 
+source_url: https://github.com/alysawyer/modulus-magnus-linguae
 ---
-
+<!-- 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 ## Headings
@@ -155,4 +153,4 @@ X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
 
 Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
 
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures. -->
