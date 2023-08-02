@@ -1,9 +1,9 @@
 ---
 title: Low Resource Machine Learning Research
 seo_title: Low Resource Machine Learning Research
-summary: Teaching large language models underrepresented languages using a textbook training method.
-description: Teaching large language models underrepresented languages using a textbook training method.
-slug: cpdr-data-viz
+summary: Teaching large language models underrepresented languages with textbooks.
+description: Teaching large language models underrepresented languages with textbooks.
+slug: latin-llm
 author: Alyssa
 
 draft: false
@@ -12,7 +12,7 @@ lastmod:
 expiryDate: 
 publishDate: 
 
-feature_image: website.jpg
+feature_image: llm-paper.png
 feature_image_alt: Website
 
 project types: 

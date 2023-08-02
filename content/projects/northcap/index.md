@@ -12,7 +12,7 @@ lastmod:
 expiryDate: 
 publishDate: 
 
-feature_image: web-design.jpg
+feature_image: northacp.png
 feature_image_alt: Northcap image
 
 project types: 

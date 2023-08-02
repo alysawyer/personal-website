@@ -12,8 +12,8 @@ lastmod:
 expiryDate: 
 publishDate: 
 
-feature_image: website.jpg
-feature_image_alt: Website
+feature_image: object-demo.png
+feature_image_alt: Demonstration of object graph progress
 
 project types: 
     - Freelance
