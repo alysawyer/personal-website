@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 
 :root, [data-theme="default"] {
-  --color-primary:   rgba(129, 178, 154, 1);
+  --color-primary:   rgba(41, 120, 160, 1);
+  --color-secondary: #245584ff;
   --color-inline-code: rgba(252, 186, 4, 1);
   
   /* color contrasts */
@@ -35,7 +36,7 @@
 }
 
 [data-theme="dark"] {
-  --color-primary:   rgba(129, 178, 154, 1);
+  --color-primary:   rgba(41, 120, 160, 1);
   --color-inline-code: rgba(252, 186, 4, 1);
   
   /* color contrasts */
