@@ -12,10 +12,3 @@
     url = "/posts/"
     weight = 2
 
-[[main]]
-    # Top-level menu entry
-    identifier = "keyboards"
-    name = "Keyboards"
-    url = "/keyboards/"
-    weight = 3
-
