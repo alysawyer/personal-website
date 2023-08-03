@@ -1,8 +1,8 @@
 ---
-title: Handwiring Custom Acrylic Keyboard
-seo_title: Handwiring Custom Acrylic Keyboard
-summary: My process for making an acrylic keyboard entirely from scratch.
-description: My process for making an acrylic keyboard entirely from scratch.
+title: Hand-wiring Custom Acrylic Keyboard
+seo_title: Hand-wiring Custom Acrylic Keyboard
+summary: My process for making a 40% entirely from scratch.
+description: My process for making a 40% keyboard entirely from scratch.
 slug: ditto-keyboard
 author: Alyssa Sawyer
 
