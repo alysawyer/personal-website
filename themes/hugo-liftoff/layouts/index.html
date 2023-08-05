@@ -1,7 +1,11 @@
 {{ define "main" }}
 <script type="module">
-  import { annotate } from "https://unpkg.com/rough-notation?module";
 
+  // ascii art
+  console.log("\u2590\u2593\u2588\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2580\u2588\u2593\u258C\u2591\u2584\u2584\u2584\u2584\u2584\u2591\r\n\u2590\u2593\u2588\u2591\u2591\u2580\u2591\u2591\u2580\u2584\u2591\u2591\u2588\u2593\u258C\u2591\u2588\u2584\u2584\u2584\u2588\u2591\r\n\u2590\u2593\u2588\u2591\u2591\u2584\u2591\u2591\u2584\u2580\u2591\u2591\u2588\u2593\u258C\u2591\u2588\u2584\u2584\u2584\u2588\u2591\r\n\u2590\u2593\u2588\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2584\u2588\u2593\u258C\u2591\u2588\u2588\u2588\u2588\u2588\u2591\r\n\u2591\u2591\u2591\u2591\u2584\u2584\u2588\u2588\u2588\u2584\u2584\u2591\u2591\u2591\u2591\u2591\u2588\u2588\u2588\u2588\u2588\u2591\r\n");
+ 
+  // rough notation
+  import { annotate } from "https://unpkg.com/rough-notation?module";
 
   function checkParent(elem) {
     const parent = elem.parentElement;
@@ -12,8 +16,6 @@
     const cir = document.createElement("und");
     const blq = document.createElement("stx");
     const crx = document.createElement("stx");
-    console.log(elem.hasChildNodes(), elem);
-
 
     if (
       parent.constructor === hil.constructor ||
@@ -29,7 +31,6 @@
     return true;
   }
 
-
   function annotateElement(selector, type, color) {
     document.querySelectorAll(selector).forEach((elem) => {
       const shouldAllowAnnotation = checkParent(elem);
@@ -42,7 +43,6 @@
       }
     });
   }
-
 
   function annotateNestedElement(selector, type, color) {
     document.querySelectorAll(selector).forEach((elem) => {
@@ -60,8 +60,6 @@
       }, time);
     });
   }
-
-
   try {
     annotateElement("und", "underline", "#245584");
     annotateElement("hil", "highlight", "#FCBA04");
@@ -74,7 +72,6 @@
     console.log(exception.message);
   }
 </script>
-
 
 <style>
   .section-content em,
