@@ -12,7 +12,7 @@ lastmod:
 expiryDate: 
 publishDate: 
 
-feature_image: llm-paper.png
+feature_image: LLM.png
 feature_image_alt: Website
 
 project types: 
