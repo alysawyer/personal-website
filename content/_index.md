@@ -1,6 +1,6 @@
 ---
 title: Alyssa Sawyer
-subtitle: I study CS and Math at Harvey Mudd College. I'm also a Machine Learning Research Assistant at Claremont McKenna College, and a web developer for Claremont Graduate University.
+subtitle: I study CS and Math at Harvey Mudd College. 
 
 seo_title: Alyssa Sawyer
 
