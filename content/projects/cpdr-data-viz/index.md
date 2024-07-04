@@ -22,7 +22,7 @@ techstack:
     - HTML/CSS
     - JavaScript
     - D3.js
-# live_url: https://hugo-liftoff.netlify.app
+live_url: https://research.cgu.edu/cultural-property-disputes-resource/metadata-analysis/cultural-property-disputes-worldwide/
 source_url: https://github.com/alysawyer/cpdr-dataviz
 ---
 <!-- 
